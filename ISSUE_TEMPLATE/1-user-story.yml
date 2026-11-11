@@ -1,0 +1,52 @@
+name: "User story"
+description: "Une fonctionnalité vue par l'utilisateur (membre, éditeur, admin)"
+title: "US-XX · "
+labels: ["type:story"]
+body:
+  - type: markdown
+    attributes:
+      value: "Décrivez le besoin du point de vue de l'utilisateur. Les tâches techniques seront créées ensuite comme sous-issues."
+  - type: input
+    id: role
+    attributes:
+      label: "En tant que…"
+      placeholder: "membre de l'église / éditeur / administrateur"
+    validations:
+      required: true
+  - type: textarea
+    id: besoin
+    attributes:
+      label: "Je veux…"
+      placeholder: "lire la Bible par livre et par chapitre"
+    validations:
+      required: true
+  - type: textarea
+    id: but
+    attributes:
+      label: "Afin de…"
+      placeholder: "méditer la Parole où que je sois"
+    validations:
+      required: true
+  - type: textarea
+    id: criteres
+    attributes:
+      label: "Critères d'acceptation"
+      description: "Ce qui doit être vrai pour que la story soit terminée. Une case par critère."
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: piste
+    attributes:
+      label: "Piste principale"
+      options: ["Mobile", "BD", "Admin", "Design", "Coordination"]
+    validations:
+      required: true
+  - type: textarea
+    id: maquette
+    attributes:
+      label: "Maquette / références"
+      description: "Lien Figma, capture, référence au plan de démarrage…"

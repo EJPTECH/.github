@@ -1,0 +1,35 @@
+name: "Tâche technique"
+description: "Un travail de 1 à 3 jours, rattaché à une user story"
+labels: ["type:tâche"]
+body:
+  - type: input
+    id: story
+    attributes:
+      label: "User story concernée"
+      placeholder: "#12 ou lien vers l'issue"
+    validations:
+      required: true
+  - type: textarea
+    id: travail
+    attributes:
+      label: "Travail à faire"
+      placeholder: "Ce qu'il faut faire, concrètement"
+    validations:
+      required: true
+  - type: textarea
+    id: fini
+    attributes:
+      label: "C'est terminé quand…"
+      value: |
+        - [ ] 
+        - [ ] Pull Request relue et fusionnée
+    validations:
+      required: true
+  - type: dropdown
+    id: taille
+    attributes:
+      label: "Taille estimée"
+      description: "Au-delà de 3 jours, découpez la tâche."
+      options: ["S (≤ 1 jour)", "M (2 jours)", "L (3 jours)"]
+    validations:
+      required: true
